@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autonomous-financial-research-agent"
+version = "0.1.0"
+description = "An autonomous agentic AI system for multi-source financial research."
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "openai",
+    "python-dotenv",
+    "chromadb",
+    "tenacity",
+    "rich",
+    "httpx",
+    "tiktoken",
+    "pydantic>=2.0,<3.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.0,<10.0"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

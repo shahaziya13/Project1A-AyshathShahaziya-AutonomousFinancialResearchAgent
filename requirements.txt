@@ -1,2 +1,9 @@
+openai
+python-dotenv
+chromadb
+tenacity
+rich
+httpx
+tiktoken
 pydantic>=2.0,<3.0
 pytest>=9.0,<10.0
