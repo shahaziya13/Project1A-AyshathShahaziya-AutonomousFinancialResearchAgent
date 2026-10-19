@@ -8,7 +8,11 @@ and executing tools used by the Autonomous Financial Research Agent.
 from typing import Any
 
 from tools.mock_tools import MOCK_TOOL_FUNCTIONS
+from tools.sec_edgar import sec_filing_search
+from tools.financial_api import financial_data_api, company_profile
 from tools.schemas.tool_schemas import TOOL_SCHEMAS
+from tools.web_search import web_search
+from tools.news_sentiment import news_sentiment
 
 
 class ToolRegistry:
@@ -21,6 +25,11 @@ class ToolRegistry:
         }
 
         self._functions = MOCK_TOOL_FUNCTIONS.copy()
+        self._functions["sec_filing_search"] = sec_filing_search
+        self._functions["financial_data_api"] = financial_data_api
+        self._functions["web_search"] = web_search
+        self._functions["news_sentiment"] = news_sentiment
+        self._functions["company_profile"] = company_profile
 
     def list_tools(self) -> list[str]:
         """Return the names of all registered tools."""

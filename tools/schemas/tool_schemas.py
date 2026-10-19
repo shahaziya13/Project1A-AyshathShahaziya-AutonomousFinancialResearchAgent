@@ -10,26 +10,41 @@ TOOL_SCHEMAS = [
         "type": "function",
         "function": {
             "name": "sec_filing_search",
-            "description": "Search SEC filings such as 10-K, 10-Q, and 8-K for company information.",
+            "description": (
+                "Search recent SEC EDGAR filings for a public company."
+            ),
             "parameters": {
                 "type": "object",
                 "properties": {
                     "company": {
                         "type": "string",
-                        "description": "Company name or ticker symbol."
+                        "description": (
+                            "Company name or stock ticker, "
+                            "for example Microsoft or MSFT."
+                        ),
                     },
                     "filing_type": {
                         "type": "string",
-                        "description": "SEC filing type such as 10-K, 10-Q, or 8-K."
+                        "description": (
+                            "SEC filing form type such as "
+                            "10-K, 10-Q, or 8-K."
+                        ),
+                        "default": "10-K",
                     },
-                    "query": {
-                        "type": "string",
-                        "description": "Information to search for inside the filing."
-                    }
+                    "limit": {
+                        "type": "integer",
+                        "description": (
+                            "Maximum number of filings to return."
+                        ),
+                        "minimum": 1,
+                        "maximum": 20,
+                        "default": 5,
+                    },
                 },
-                "required": ["company", "query"]
-            }
-        }
+                "required": ["company"],
+                "additionalProperties": False,
+            },
+        },
     },
 
     {
@@ -108,29 +123,39 @@ TOOL_SCHEMAS = [
             }
         }
     },
-
     {
         "type": "function",
         "function": {
             "name": "news_sentiment",
-            "description": "Analyze financial news coverage and estimate overall sentiment.",
+            "description": (
+                "Retrieve recent company news and analyze "
+                "its sentiment using VADER."
+            ),
             "parameters": {
                 "type": "object",
                 "properties": {
                     "company": {
                         "type": "string",
-                        "description": "Company name or ticker symbol."
+                        "description": (
+                            "Company name or stock ticker, "
+                            "for example Apple or AAPL."
+                        ),
                     },
-                    "days": {
+                    "max_results": {
                         "type": "integer",
-                        "description": "Number of recent days to analyze.",
+                        "description": (
+                            "Maximum number of recent news "
+                            "articles to analyze."
+                        ),
                         "minimum": 1,
-                        "maximum": 365
-                    }
+                        "maximum": 10,
+                        "default": 5,
+                    },
                 },
-                "required": ["company"]
-            }
-        }
+                "required": ["company"],
+                "additionalProperties": False,
+            },
+        },
     },
 
     {

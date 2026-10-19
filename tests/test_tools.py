@@ -25,6 +25,7 @@ def test_registry_contains_12_tools(registry):
 
 def test_company_profile(registry):
     """Company profile tool should execute successfully."""
+
     result = registry.execute(
         "company_profile",
         {"company": "Microsoft"},
@@ -32,7 +33,13 @@ def test_company_profile(registry):
 
     assert result["success"] is True
     assert result["tool"] == "company_profile"
-    assert result["data"]["company"] == "Microsoft"
+
+    data = result["data"]
+
+    assert data["ticker"] == "MSFT"
+    assert data["company_name"]
+    assert data["sector"]
+    assert result["source"] == "Yahoo Finance via yfinance"
 
 
 def test_web_search(registry):
@@ -51,20 +58,30 @@ def test_web_search(registry):
 
 
 def test_financial_data_api(registry):
-    """Financial data mock should return requested metrics."""
+    """Financial data tool should return requested real metrics."""
+
     result = registry.execute(
         "financial_data_api",
         {
             "company": "Apple",
-            "metrics": ["revenue", "net_income"],
+            "metrics": [
+                "total_revenue",
+                "net_income",
+            ],
             "period": "latest",
         },
     )
 
     assert result["success"] is True
     assert result["tool"] == "financial_data_api"
-    assert "revenue" in result["data"]["metrics"]
-    assert "net_income" in result["data"]["metrics"]
+
+    data = result["data"]
+
+    assert data["ticker"] == "AAPL"
+    assert data["company_name"]
+    assert "total_revenue" in data
+    assert "net_income" in data
+    assert result["source"] == "Yahoo Finance via yfinance"
 
 
 def test_calculation_engine_percentage_change(registry):
