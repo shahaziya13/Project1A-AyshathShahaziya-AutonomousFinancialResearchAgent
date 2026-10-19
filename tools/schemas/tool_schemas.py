@@ -186,28 +186,67 @@ TOOL_SCHEMAS = [
         "type": "function",
         "function": {
             "name": "vector_db_store",
-            "description": "Store verified research evidence in long-term vector memory.",
+            "description": (
+                "Store financial research evidence in the "
+                "ARA-1 long-term vector memory."
+            ),
             "parameters": {
                 "type": "object",
                 "properties": {
-                    "content": {
+                    "text": {
                         "type": "string",
-                        "description": "Evidence or research content to store."
-                    },
-                    "source": {
-                        "type": "string",
-                        "description": "Source of the evidence."
+                        "description": (
+                            "Research evidence or findings to store."
+                        ),
                     },
                     "company": {
                         "type": "string",
-                        "description": "Related company, if applicable."
-                    }
+                        "description": (
+                            "Company associated with the research."
+                        ),
+                    },
+                    "source": {
+                        "type": "string",
+                        "description": (
+                            "Source or research result from which "
+                            "the evidence was obtained."
+                        ),
+                    },
+                    "source_type": {
+                        "type": "string",
+                        "description": (
+                            "Category of the stored source."
+                        ),
+                        "default": "research",
+                    },
+                    "research_query": {
+                        "type": "string",
+                        "description": (
+                            "Original research query associated "
+                            "with the evidence."
+                        ),
+                        "default": "",
+                    },
+                    "confidence": {
+                        "type": "number",
+                        "description": (
+                            "Confidence score for the stored evidence."
+                        ),
+                        "minimum": 0.0,
+                        "maximum": 1.0,
+                        "default": 0.8,
+                    },
                 },
-                "required": ["content", "source"]
-            }
-        }
+                "required": [
+                    "text",
+                    "company",
+                    "source",
+                ],
+                "additionalProperties": False,
+            },
+        },
     },
-
+    
     {
         "type": "function",
         "function": {

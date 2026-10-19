@@ -29,3 +29,8 @@ data/vector_db/
 # Operating system files
 .DS_Store
 Thumbs.db
+
+# Runtime memory data
+memory/episodic_memory.json
+memory/test_episodic_memory.json
+memory/__pycache__/

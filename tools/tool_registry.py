@@ -13,6 +13,7 @@ from tools.financial_api import financial_data_api, company_profile
 from tools.schemas.tool_schemas import TOOL_SCHEMAS
 from tools.web_search import web_search
 from tools.news_sentiment import news_sentiment
+from tools.memory_tools import vector_db_search, vector_db_store
 
 
 class ToolRegistry:
@@ -30,6 +31,8 @@ class ToolRegistry:
         self._functions["web_search"] = web_search
         self._functions["news_sentiment"] = news_sentiment
         self._functions["company_profile"] = company_profile
+        self._functions["vector_db_search"] = vector_db_search
+        self._functions["vector_db_store"] = vector_db_store
 
     def list_tools(self) -> list[str]:
         """Return the names of all registered tools."""
