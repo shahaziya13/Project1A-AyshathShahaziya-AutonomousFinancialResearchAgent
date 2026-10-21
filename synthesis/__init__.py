@@ -2,6 +2,7 @@
 from synthesis.conflict_resolver import ConflictResolver, resolve_conflict
 from synthesis.pipeline import SynthesisPipeline, synthesize_research
 from synthesis.rag_pipeline import RAGPipeline
+from synthesis.verifier import ResearchVerifier, verify_research
 
 __all__ = [
     "EvidenceSynthesizer",
@@ -11,4 +12,6 @@ __all__ = [
     "SynthesisPipeline",
     "synthesize_research",
     "RAGPipeline",
+    "ResearchVerifier",
+    "verify_research",
 ]
