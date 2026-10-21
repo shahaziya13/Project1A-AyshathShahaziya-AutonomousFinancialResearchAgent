@@ -1,0 +1,562 @@
+
+============================================================
+SEC FILINGS
+============================================================
+{'cached': False,
+ 'confidence': 1.0,
+ 'data': {'cik': '0001318605',
+          'company': 'Tesla, Inc.',
+          'filing_type': '10-K',
+          'filings': [{'accession_number': '0001628280-26-003952',
+                       'filing_date': '2026-01-29',
+                       'filing_url': 'https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm',
+                       'form': '10-K',
+                       'primary_document': 'tsla-20251231.htm',
+                       'report_date': '2025-12-31'},
+                      {'accession_number': '0001628280-25-003063',
+                       'filing_date': '2025-01-30',
+                       'filing_url': 'https://www.sec.gov/Archives/edgar/data/1318605/000162828025003063/tsla-20241231.htm',
+                       'form': '10-K',
+                       'primary_document': 'tsla-20241231.htm',
+                       'report_date': '2024-12-31'},
+                      {'accession_number': '0001628280-24-002390',
+                       'filing_date': '2024-01-29',
+                       'filing_url': 'https://www.sec.gov/Archives/edgar/data/1318605/000162828024002390/tsla-20231231.htm',
+                       'form': '10-K',
+                       'primary_document': 'tsla-20231231.htm',
+                       'report_date': '2023-12-31'}]},
+ 'source': 'SEC EDGAR',
+ 'source_url': 'https://data.sec.gov/submissions/CIK0001318605.json',
+ 'success': True,
+ 'tool': 'sec_filing_search'}
+
+============================================================
+FINANCIAL DATA
+============================================================
+{'cached': False,
+ 'confidence': 0.9,
+ 'data': {'company_name': 'Tesla, Inc.',
+          'current_price': 375.81,
+          'market_cap': 1484279382016,
+          'net_income': 3806000128,
+          'profit_margin': 0.03671,
+          'revenue_growth': 0.255,
+          'ticker': 'TSLA',
+          'total_revenue': 103619002368,
+          'trailing_eps': 1.08,
+          'trailing_pe': 347.9722},
+ 'source': 'Yahoo Finance via yfinance',
+ 'success': True,
+ 'tool': 'financial_data_api'}
+
+============================================================
+WEB SEARCH
+============================================================
+{'cached': False,
+ 'confidence': 0.85,
+ 'data': {'query': 'Tesla latest financial operational regulatory competitive risks',
+          'results': [{'content': 'Our operations in such jurisdictions, particularly as a company '
+                                  'based in the U.S., with additional manufacturing operations in '
+                                  'China and Europe, create risks relating to conforming our '
+                                  'products to regulatory and safety requirements and charging and '
+                                  'other electric infrastructures; organizing local operating '
+                                  'entities; establishing, staffing and managing foreign business '
+                                  'locations; attracting local customers; navigating U.S. and '
+                                  'foreign government taxes, regulations and permit requirements; '
+                                  '[...] negatively impacted sales. Specifically, recent '
+                                  'governmental and regulatory actions have repealed and/or '
+                                  'restricted consumer, manufacturing and charging infrastructure '
+                                  'tax credits, and certain regulatory credit programs tied to our '
+                                  'products. These, and any similar actions in the future, may '
+                                  'affect demand for our vehicles, and harm our growth, prospects '
+                                  'and operating results, and the loss of previously available tax '
+                                  'credits and carbon offset mechanisms may further negatively '
+                                  'impact our financial [...] and elimination of certain penalties '
+                                  'for violations of certain regulatory credit programs. We have '
+                                  'recognized the effects of the OBBBA provisions in our financial '
+                                  'results to the extent they are applicable to the year ended '
+                                  'December 31, 2025. We will continue to evaluate the impact of '
+                                  'these provisions on our 2026 and subsequent consolidated '
+                                  'financial statements, including loss of certain regulatory '
+                                  'credit sales tied to our products and changes to the costs of '
+                                  'our products.',
+                       'score': 0.6450534,
+                       'title': 'tsla-20251231-gen.pdf',
+                       'url': 'https://ir.tesla.com/_flysystem/s3/sec/000162828026003952/tsla-20251231-gen.pdf'},
+                      {'content': '"They are making conventional ICE vehicles more competitive '
+                                  'while making EVs less competitive," said Batt Odgerel, a '
+                                  'director at the Energy Policy Research Foundation, referring to '
+                                  'Congress, Trump and the federal government.\n'
+                                  '\n'
+                                  'Tesla risks losing revenue from the credits as well as market '
+                                  'share, he added. [...] Revenue from credits was always expected '
+                                  'to dwindle as traditional automakers ramped up production of '
+                                  'zero- or low-emission cars, but not so fast. Tesla has '
+                                  'acknowledged its financials would be "harmed" if demand and '
+                                  'prices of credits dropped. It did not respond to a request for '
+                                  'comment.',
+                       'score': 0.6407488,
+                       'title': "Tesla's easy money from regulatory credits set to dry up amid "
+                                'weakening sales | Reuters',
+                       'url': 'https://www.reuters.com/business/autos-transportation/teslas-easy-money-regulatory-credits-set-dry-up-amid-weakening-sales-2025-07-22'},
+                      {'content': 'with NHTSA and EU regulators and making safety reports '
+                                  'transparent will limit reputational risk. If not implemented, '
+                                  'the multiplier of intertwined political, competitive and '
+                                  'financial risks could drag Tesla into erosion in both market '
+                                  'value and profitability. [...] Financial indicators also '
+                                  'reflect the risks. First-quarter revenue fell 9% to $19.3 '
+                                  'billion, adjusted net income fell 39% to $934 million, and '
+                                  'operating margin narrowed from 5.5% to 2.1% (Inagaki et al., '
+                                  '2025). As the chart above shows, all metrics are experiencing a '
+                                  'sharp decline as of Q1 ’25. Revenue has decreased, net income '
+                                  'is approximately 400 million USD, and the net margin has '
+                                  'significantly dropped to 2.12%. According to the Lex column, '
+                                  'Tesla was the US company with the most considerable [...] Tesla '
+                                  'entered the first quarter of 2025 under the influence of both '
+                                  'internal and external pressures. US Transportation Secretary '
+                                  'Sean Duffy’s regulatory package that loosens rules on '
+                                  'autonomous vehicles and eases crash reporting provides a '
+                                  'short-term incentive; however, the political backdrop on which '
+                                  'the same package is based is highly volatile (Morris & Inagaki, '
+                                  '2025). Elon Musk’s responsibility for the Department of '
+                                  'Government Efficiency (Doge) in the Trump administration '
+                                  'directly affects',
+                       'score': 0.58408195,
+                       'title': "Tesla's Triple Threat: Political Risk, Global Competition, and "
+                                'Profit Margin Decline | Atlas Institute for International Affairs',
+                       'url': 'https://atlasinstitute.org/teslas-triple-threat-political-risk-global-competition-and-profit-margin-decline'},
+                      {'content': 'Further assessing from within Tesla, there are certain '
+                                  'financial risks, as mentioned earlier, the covenant '
+                                  'restrictions contained in the debt agreements may limit the '
+                                  "company's ability to operate its business and Tesla does not "
+                                  'have sufficient funds to repay the debt if it needs to be '
+                                  'accelerated; the company also has the problem of not being able '
+                                  'to obtain sufficient funds. [...] points out that with the '
+                                  'global emphasis on environmental protection and policy support, '
+                                  'the electric vehicle market is experiencing explosive growth, '
+                                  'providing Tesla with broad market opportunities; at the same '
+                                  'time, intensified competition, unstable supply chain and '
+                                  'geopolitical risks pose threats. The risk assessment points out '
+                                  'that Tesla is facing challenges such as market demand '
+                                  'fluctuation, supply chain risk, policy subsidy retreat and '
+                                  "financial risk. Taken together, it predicts that [...] Tesla's "
+                                  'capital structure leverage ratio has been declining year on '
+                                  'year, from 2.51 in 2021 to 1.82 in 2023.The decline in leverage '
+                                  "ratio is closely related to Tesla's actions in adjusting its "
+                                  'financial strategy. In the face of uncertainty in the financial '
+                                  'markets and tightening of regulatory policies, the company has '
+                                  'chosen to reduce its financial risk by lowering its financial '
+                                  'leverage and reducing its debt financing.\n'
+                                  'Table 2. Tesla’s Liquidity Ratios.',
+                       'score': 0.559411,
+                       'title': "An Analysis of Tesla's Market Position and Future Prospects",
+                       'url': 'https://www.atlantis-press.com/article/126013074.pdf'},
+                      {'content': 'Qin, Y., Xiao, Y., & Yuan, J. (2021, September). The '
+                                  'Comprehensive Competitiveness of Tesla Based on Financial '
+                                  'Analysis: A Case Study. In 2021 International Conference on '
+                                  'Financial Management and Economic Transition (FMET 2021) (pp. '
+                                  '462-469). Atlantis Press.\n'
+                                  '\n'
+                                  'Archsmith, J., Muehlegger, E., & Rapson, D. S. (2022). Future '
+                                  'paths of electric vehicle adoption in the United States: '
+                                  'predictable determinants, obstacles, and opportunities. '
+                                  'Environmental and Energy Policy and the Economy, 3 (1), 71-110. '
+                                  '[...] capacity, solvency, and development capacity based on '
+                                  "TESLA's financial statements from 2020 to 2022. At the same "
+                                  'time, the financial statements of companies in the industry, '
+                                  'BYD and SAIC, were compared and analyzed with, and the '
+                                  'opportunities and challenges encountered by them in China were '
+                                  'analyzed. Ratio analysis is the main method used in this '
+                                  'article in financial analysis, it is collected from the annual '
+                                  'report of the company to calculate. The study found that from '
+                                  'these different [...] Highlights in Business, Economics and '
+                                  'Management\n'
+                                  '\n'
+                                  '# Financial Analysis and Risk Study of Tesla Inc.\n'
+                                  '\n'
+                                  '## Authors\n'
+                                  '\n'
+                                  ' Zixin Zheng\n'
+                                  '\n'
+                                  '## DOI:\n'
+                                  '\n'
+                                  ' \n'
+                                  '\n'
+                                  '## Keywords:\n'
+                                  '\n'
+                                  ' Electric vehicle, China, Tesla, Risk analysis, Financial '
+                                  'analysis\n'
+                                  '\n'
+                                  '## Abstract',
+                       'score': 0.49948794,
+                       'title': 'Financial Analysis and Risk Study of Tesla Inc. | Highlights in '
+                                'Business, Economics and Management',
+                       'url': 'https://drpress.org/ojs/index.php/HBEM/article/view/16127'}]},
+ 'source': 'Tavily Search API',
+ 'success': True,
+ 'tool': 'web_search'}
+
+============================================================
+NEWS SENTIMENT
+============================================================
+{'cached': False,
+ 'confidence': 0.8,
+ 'data': {'article_count': 5,
+          'articles': [{'content': 'In related news, CFO Vaibhav Taneja sold 2,606 shares of the '
+                                   "company's stock in a transaction dated Tuesday, September 8th. "
+                                   'The stock was sold at an average price of $360.13, for a total '
+                                   'value of $938,498.78. Following the completion of the '
+                                   'transaction, the chief financial officer owned 25,972 shares '
+                                   "of the company's stock, valued at approximately $9,353,296.36. "
+                                   'This represents a 9.12% decrease in their position. The '
+                                   'transaction was disclosed in a document filed with the SEC, '
+                                   'which can be [...] In related news, CFO Vaibhav Taneja sold '
+                                   "2,606 shares of the company's stock in a transaction dated "
+                                   'Tuesday, September 8th. The stock was sold at an average price '
+                                   'of $360.13, for a total value of $938,498.78. Following the '
+                                   'completion of the transaction, the chief financial officer '
+                                   "owned 25,972 shares of the company's stock, valued at "
+                                   'approximately $9,353,296.36. This represents a 9.12% decrease '
+                                   'in their position. The transaction was disclosed in a document '
+                                   'filed with the SEC, which can be [...] In related news, CFO '
+                                   "Vaibhav Taneja sold 2,606 shares of the company's stock in a "
+                                   'transaction dated Tuesday, September 8th. The stock was sold '
+                                   'at an average price of $360.13, for a total value of '
+                                   '$938,498.78. Following the completion of the transaction, the '
+                                   "chief financial officer owned 25,972 shares of the company's "
+                                   'stock, valued at approximately $9,353,296.36. This represents '
+                                   'a 9.12% decrease in their position. The transaction was '
+                                   'disclosed in a document filed with the SEC, which can be',
+                        'published_date': 'Tue, 20 Oct 2026 07:04:31 GMT',
+                        'sentiment': {'compound': 0.9802,
+                                      'label': 'positive',
+                                      'negative': 0.0,
+                                      'neutral': 0.88,
+                                      'positive': 0.12},
+                        'title': '8,810 Tesla, Inc. $TSLA Shares Sold by AA Financial Advisors LLC',
+                        'url': 'https://www.marketbeat.com/instant-alerts/filing-8810-tesla-inc-tsla-shares-sold-by-aa-financial-advisors-llc-2026-10-20'},
+                       {'content': 'After two months of product showcases, Tesla must now unveil '
+                                   'its financials. On Wednesday, Tesla will report third-quarter '
+                                   'earnings after product demos for the Cybercab, Semi truck and '
+                                   'Roadster. None of these new products are likely to move the '
+                                   'financial needle for Tesla yet, even if they are billed as '
+                                   "critical to its future. For now, Tesla's business still "
+                                   'relies…\n'
+                                   '\n'
+                                   "Copyright ©2026 Investor's Business Daily, LLC. All rights "
+                                   'reserved. 87990cbe856818d5eddac44c7b1cdeb8\n'
+                                   '\n'
+                                   '## Related news [...] ##### Dow Jones Futures: Tesla Flies On '
+                                   'Roadster As Investors Question Anthropic Valuation\n'
+                                   '\n'
+                                   "### Today's Spotlight\n"
+                                   '\n'
+                                   '## Get Leaderboard for 58% Off\n'
+                                   '\n'
+                                   '## See the Upgraded MarketSurge\n'
+                                   '\n'
+                                   '## Join MarketDiem for $20/Year\n'
+                                   '\n'
+                                   '### More News\n'
+                                   '\n'
+                                   'Money growth concept with coins and growing plants\n'
+                                   'artificial intelligence technology\n'
+                                   'Meta Muse agent avatar for enterprise software, concept\n'
+                                   '\n'
+                                   'Meta Platforms aims to leverage its AI technology to finally '
+                                   'win a place in corporations. (© Chris Gash)\n'
+                                   '\n'
+                                   '### Partner Center [...] ## Related news\n'
+                                   '\n'
+                                   'Tesla and SpaceX CEO Elon Musk\n'
+                                   '\n'
+                                   '## SpaceX Stock Climbs After Musk Gift Pledge; Analysts '
+                                   'Predict Tesla Merger Price\n'
+                                   '\n'
+                                   '10/19/2026\n'
+                                   'Elon Musk pledged to give a share of his SpaceX stock to '
+                                   '"every kid in America." SpaceX stock is up...\n'
+                                   '\n'
+                                   '10/19/2026\n'
+                                   'Elon Musk pledged to give a share of his SpaceX...\n'
+                                   '\n'
+                                   '##### Dow Jones Futures Fall As CoreWeave, Dell, AI Stocks '
+                                   'Rebound; Meta, SpaceX, Tesla Earnings Key\n'
+                                   '\n'
+                                   '##### Tesla Energy Chief Reportedly Out; AI Pivot Kicks In',
+                        'published_date': 'Mon, 19 Oct 2026 17:43:25 GMT',
+                        'sentiment': {'compound': 0.9569,
+                                      'label': 'positive',
+                                      'negative': 0.009,
+                                      'neutral': 0.903,
+                                      'positive': 0.088},
+                        'title': 'Tesla Stock Rebounds As Wall Street Preps For A Down Earnings '
+                                 "Report | Investor's Business Daily",
+                        'url': 'https://www.investors.com/news/tesla-elon-musk-robotaxi-cybercab-optimus-electric-vehicle'},
+                       {'content': 'On an annual basis, Q3 revenue is projected at $28.98 billion, '
+                                   'compared with $28.10 billion a year earlier, according to '
+                                   'Fiscal AI. EBITDA is expected to decline to $3.40 billion from '
+                                   '$4.23 billion, while EPS falls to $0.35 from $0.50.\n'
+                                   '\n'
+                                   'Morningstar expects free cash flow to be negative for a second '
+                                   "consecutive quarter because of Tesla's substantial capital "
+                                   'spending. It also expects investors to scrutinize the '
+                                   "company's near-term robotaxi and humanoid-robot guidance. "
+                                   "[...] It also reports $158.36 billion in Musk's 2025 "
+                                   'compensation based on grant-date award valuations, including '
+                                   '$26.1 billion for an interim award forfeited in April.\n'
+                                   '\n'
+                                   '## Investors Press Tesla For FSD And Optimus Timelines\n'
+                                   '\n'
+                                   'Tesla will release its third-quarter (Q3) results after the '
+                                   'stock market closes on Wednesday. Revenue is expected to '
+                                   'decline 1% quarter-over-quarter, while EBITDA rises 15% and '
+                                   'EBIT increases 129%, according to Koyfin. Meanwhile, adjusted '
+                                   'EPS is projected to rise 36%. [...] +0.96%\n'
+                                   '\n'
+                                   " ARK's $4,400 forecast for 2031 implies about 1,095% upside, "
+                                   'with robotaxis accounting for about 80% of projected '
+                                   'enterprise value.\n'
+                                   " Tesla reports Musk's stake at 19.8% and 2025 compensation of "
+                                   '$158.36 billion based on grant-date award valuations.\n'
+                                   ' Morningstar expects another quarter of negative free cash '
+                                   'flow as the company reports its Q3 results on Wednesday.',
+                        'published_date': 'Tue, 20 Oct 2026 01:00:00 GMT',
+                        'sentiment': {'compound': 0.9403,
+                                      'label': 'positive',
+                                      'negative': 0.031,
+                                      'neutral': 0.869,
+                                      'positive': 0.1},
+                        'title': "Tesla Stock At $4,400? Cathie Wood's ARK Pins Hopes On "
+                                 'Robotaxis, Sees SpaceX Merger In 5 Years',
+                        'url': 'https://finance.yahoo.com/markets/stocks/articles/tesla-stock-4-400-cathie-014344401.html'},
+                       {'content': 'Carol Massar and Tim Stenovec bring together the latest news '
+                                   'from the world of business and finance and the interesting '
+                                   'stories of global technology, politics, economics and more by '
+                                   'harnessing the power of Bloomberg Businessweek reporters and '
+                                   'editors.\n'
+                                   '\n'
+                                   'Subscribe to Bloomberg Podcasts: \n'
+                                   'Listen to more of Bloomberg Businessweek:    • Bloomberg '
+                                   'Businessweek (Audio)  \n'
+                                   '\n'
+                                   '#Bloomberg #Podcast #News #Businessweek\n'
+                                   '\n'
+                                   'Visit us: \n'
+                                   '\n'
+                                   'Follow Bloomberg Podcasts on Twitter:   / podcasts [...] '
+                                   '[1:51] segment to ramp up and uh the expectations are quite '
+                                   'high because uh the company guided to 100 billion in AR\n'
+                                   "[1:59] by the end of the year and they're nowhere close where "
+                                   'are they right now they they are closer to a 25 billion 30\n'
+                                   '[2:06] billion revenue run rate so even if you extrapolate the '
+                                   "ARR they're nowhere close to that hundred billion mark and and "
+                                   "so that's where the expectations are [...] ### Transcript\n"
+                                   '[0:02] Bloomberg Audio Studios, podcasts, radio, news.\n'
+                                   '[0:09] This is Bloomberg Business Week Daily, reporting from '
+                                   '[music] the magazine that helps global leaders stay ahead '
+                                   'with\n'
+                                   '[0:16] insight on the people, companies, and trends [music] '
+                                   "shaping today's complex economy. Plus, global business, "
+                                   'finance, and tech news as it happens. The\n'
+                                   '[0:25] Bloomberg Business Week daily podcast with Carol Masser '
+                                   'and Tim Stenac.',
+                        'published_date': 'Mon, 19 Oct 2026 00:00:00 GMT',
+                        'sentiment': {'compound': 0.6486,
+                                      'label': 'positive',
+                                      'negative': 0.0,
+                                      'neutral': 0.976,
+                                      'positive': 0.024},
+                        'title': "SpaceX, Tesla, Meta Headline Week's Big Tech Earnings | "
+                                 'Bloomberg Businessweek',
+                        'url': 'https://www.youtube.com/watch?v=2VhWwvNtlGg'},
+                       {'content': '2. Day Losers\n'
+                                   '      3. Highest Open Interest\n'
+                                   '      4. Highest Implied Volatility\n'
+                                   '   5. Sectors \n'
+                                   '      1. Technology\n'
+                                   '      2. Financial Services\n'
+                                   '      3. Consumer Cyclical\n'
+                                   '      4. Consumer Defensive\n'
+                                   '      5. Communication Services\n'
+                                   '      6. Healthcare\n'
+                                   '      7. Industrials\n'
+                                   '   6. Treasury Bonds\n'
+                                   '   7. Currencies\n'
+                                   '   8. World Indices\n'
+                                   '   9. Commodities\n'
+                                   '   10. ETFs\n'
+                                   '   11. Mutual Funds\n'
+                                   '3. 1. Markets \n'
+                                   '      1. Stock Market News\n'
+                                   '      2. Real Estate\n'
+                                   '      3. Magnificent 7\n'
+                                   '      4. Private Markets [...] 5. Futures & Derivatives\n'
+                                   '   2. Originals\n'
+                                   '   3. Newsletters\n'
+                                   '   4. Economy & Policy \n'
+                                   '      1. Earnings\n'
+                                   '      2. Oil & Gas\n'
+                                   '      3. Strait of Hormuz\n'
+                                   '      4. Tariffs\n'
+                                   '      5. Clean Energy\n'
+                                   '   5. Tech \n'
+                                   '      1. Aerospace & Defense\n'
+                                   '      2. Enterprise Cloud\n'
+                                   '   6. Exchange-Traded Funds\n'
+                                   '4. Research & Tools\n'
+                                   '   1. Calendars \n'
+                                   '      1. Earnings Calendar\n'
+                                   '      2. IPO Calendar\n'
+                                   '      3. Stock Splits\n'
+                                   '      4. Economic Events\n'
+                                   '   2. Screeners \n'
+                                   '      1. Equities\n'
+                                   '      2. Most Shorted [...] 1. Crypto\n'
+                                   '2. AI\n'
+                                   '\n'
+                                   '   AI\n'
+                                   '\n'
+                                   'Yahoo Finance Video\n'
+                                   '\n'
+                                   "# Flying Teslas and SpaceX stock giveaways: What's Elon Musk "
+                                   'up to?\n'
+                                   '\n'
+                                   'Yahoo Finance Video  and Brian Sozzi\n'
+                                   '\n'
+                                   ' SPCX\n'
+                                   '\n'
+                                   '  +2.18%\n'
+                                   ' TSLA\n'
+                                   '\n'
+                                   '  +4.07%\n'
+                                   '\n'
+                                   'Yahoo Finance Executive Editor Brian Sozzi gives his '
+                                   'unfiltered take on his takeaways from a week by SpaceX (SPCX) '
+                                   'and Tesla (TSLA) founder Elon Musk. A period in which the '
+                                   "innovator introduced the world's first flying car and "
+                                   'announced a SpaceX stock giveaway for every child in America.\n'
+                                   '\n'
+                                   '00:00  Brian Sozzi',
+                        'published_date': 'Mon, 19 Oct 2026 14:00:00 GMT',
+                        'sentiment': {'compound': 0.8767,
+                                      'label': 'positive',
+                                      'negative': 0.015,
+                                      'neutral': 0.914,
+                                      'positive': 0.071},
+                        'title': "Flying Teslas and SpaceX stock giveaways: What's Elon Musk up "
+                                 'to?',
+                        'url': 'https://finance.yahoo.com/video/flying-teslas-and-spacex-stock-giveaways-whats-elon-musk-up-to-143207771.html'}],
+          'average_compound': 0.8805,
+          'company': 'Tesla',
+          'overall_sentiment': 'positive'},
+ 'source': 'Tavily News Search + VADER',
+ 'success': True,
+ 'tool': 'news_sentiment'}
+
+============================================================
+EARNINGS TRANSCRIPT
+============================================================
+{'cached': False,
+ 'confidence': 0.8,
+ 'data': {'company': 'Tesla',
+          'complete_transcript': False,
+          'note': 'Results contain public search excerpts and source references, not a complete '
+                  'verbatim earnings-call transcript.',
+          'quarter': 'latest',
+          'result_count': 3,
+          'results': [{'excerpt': 'Title: Q1 2025 Tesla Inc Earnings Call Transcript\n'
+                                  '# Q1 2025 Tesla Inc Earnings Call Transcript. Apr 22, 2025 / '
+                                  '09:30PM GMT. **Travis Axelrod** - *Tesla Inc - Head, Investor '
+                                  "Relations*. Good afternoon, everyone, and welcome to Tesla's "
+                                  'first-quarter 2025 Q&A webcast. My name is Travis Axelrod, Head '
+                                  "of Investor Relations, and I'm joined today by Elon Musk, "
+                                  'Vaibhav Taneja, and a number of other executives. Our Q1 '
+                                  'results were announced at about 3:00 PM Central Time in the '
+                                  'update deck be published at the same link as this webcast. '
+                                  'During this call, we will discuss our business outlook and make '
+                                  'forward-looking statements. These comments are based on our '
+                                  'predictions and expectations as of today. Actual events or '
+                                  'results could differ materially to a number due to a number of '
+                                  'risks and uncertainties, including those mentioned in our most '
+                                  'recent filings with the SEC. Before we jump into Q&A, Elon will '
+                                  'be providing an update. **Elon Musk** - *Tesla Inc - Chief '
+                                  "Executive Officer, Director, Technoking of Tesla*. Well, it's "
+                                  'never a dull moment these days. Well thanks for sure, every day '
+                                  'is going to be exciting. *This stock alert was generated using '
+                                  'automated technology and GuruFocus financial data to provide '
+                                  'readers with timely and accurate market reporting. This content '
+                                  'was reviewed by GuruFocus editorial team prior to publication. '
+                                  'Please send any questions or comments about this story to .*. '
+                                  '|  | Access to All Earning Calls and Stock Analysis |. |  | '
+                                  '30-Year Financial on one screen |. |  | All-in-one Stock '
+                                  'Screener with unlimited filters |. |  | Real Time Insider '
+                                  'Trading Transactions |. |  | 8,000+ Institutional investors’ '
+                                  '13F holdings |. |  | Powerful Excel Add-in and Google sheets '
+                                  "Add-on |. ### GuruFocus News. We'd love to learn more about "
+                                  'your experiences on GuruFocus.com and how we can improve! '
+                                  'download GuruFocus on Apple store. download GuruFocus on Google '
+                                  'Play.',
+                       'score': 0.9341134,
+                       'title': 'Q1 2025 Tesla Inc Earnings Call Transcript',
+                       'url': 'https://www.gurufocus.com/news/2796056/q1-2025-tesla-inc-earnings-call-transcript'},
+                      {'excerpt': '## Investing Groups\n'
+                                  '\n'
+                                  '## Portfolios\n'
+                                  '\n'
+                                  '## Find & Compare\n'
+                                  '\n'
+                                  '# Tesla, Inc. (TSLA) Q1 2026 Earnings Call Transcript\n'
+                                  '\n'
+                                  'Tesla, Inc. (TSLA) Q1 2026 Earnings Call April 22, 2026 5:30 PM '
+                                  'EDT\n'
+                                  '\n'
+                                  'Company Participants\n'
+                                  '\n'
+                                  'Travis Axelrod - Head of Investor Relations  \n'
+                                  'Elon Musk - Co-Founder, Technoking of Tesla, CEO & Director  \n'
+                                  'Vaibhav Taneja - Chief Financial Officer  \n'
+                                  'Ashok Elluswamy - Executive Officer  \n'
+                                  'Micheal Snyder - Vice President of Energy & Charging  \n'
+                                  'Lars Moravy - Vice President of Vehicle Engineering\n'
+                                  '\n'
+                                  'Conference Call Participants [...] Conference Call '
+                                  'Participants\n'
+                                  '\n'
+                                  'William Stein - Truist Securities, Inc., Research Division  \n'
+                                  'Pierre Ferragu - New Street Research LLP  \n'
+                                  'Dan Levy - Barclays Bank PLC, Research Division  \n'
+                                  'Mark Delaney - Goldman Sachs Group, Inc., Research Division  \n'
+                                  'Colin Langan - Wells Fargo Securities, LLC, Research Division\n'
+                                  '\n'
+                                  'Presentation\n'
+                                  '\n'
+                                  'Travis Axelrod  \n'
+                                  'Head of Investor Relations\n'
+                                  '\n'
+                                  "Good afternoon, everyone, and welcome to Tesla's First Quarter "
+                                  '2026 Q&A Webcast. My name is Travis Axelrod, Head of Investor '
+                                  "Relations, and I'm joined today by Elon Musk, Vaibhav Taneja "
+                                  'and a number of other executives. Our Q1 results were announced '
+                                  'at about 3 p.m. Central Time in the update deck we published at '
+                                  'the same link as this webcast.',
+                       'score': 0.9057319,
+                       'title': 'Tesla, Inc. (TSLA) Q1 2026 Earnings Call Transcript | Seeking '
+                                'Alpha',
+                       'url': 'https://seekingalpha.com/article/4893107-tesla-inc-tsla-q1-2026-earnings-call-transcript'},
+                      {'excerpt': 'Oct 23, 2024 / 09:30PM GMT  \n'
+                                  'Travis Axelrod - Tesla Inc - Head, Investor Relations  \n'
+                                  '  \n'
+                                  " Good afternoon, everyone, and welcome to Tesla's Third Quarter "
+                                  '2024 Q&A Webcast. My name is Travis Axelrod, Head of Investor '
+                                  "Relations, and I'm joined today by Elon Musk, Vaibhav Taneja, "
+                                  'and a number of other executives. Our Q3 results were announced '
+                                  'at about 3:00 p.m. Central Time in the update deck we published '
+                                  'at the same link as webcast.',
+                       'score': 0.8909888,
+                       'title': 'Q3 2024 Tesla Inc Earnings Call Transcript',
+                       'url': 'https://www.gurufocus.com/news/2564654/q3-2024-tesla-inc-earnings-call-transcript'}],
+          'retrieval_type': 'public transcript source discovery'},
+ 'source': 'Tavily Search API',
+ 'success': True,
+ 'tool': 'earnings_transcript'}

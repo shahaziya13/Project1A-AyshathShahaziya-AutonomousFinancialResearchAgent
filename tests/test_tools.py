@@ -90,42 +90,50 @@ def test_calculation_engine_percentage_change(registry):
         "calculation_engine",
         {
             "operation": "percentage_change",
-            "values": [100, 125],
+            "values": {
+                "old_value": 100,
+                "new_value": 125,
+            },
         },
     )
 
     assert result["success"] is True
-    assert result["data"]["result"] == pytest.approx(25.0)
+    assert result["data"]["result"] == 25.0
 
 
-def test_calculation_engine_division(registry):
-    """Division should return the expected value."""
+def test_calculation_engine_profit_margin(registry):
+    """Profit margin calculation should be correct."""
     result = registry.execute(
         "calculation_engine",
         {
-            "operation": "divide",
-            "values": [100, 4],
+            "operation": "profit_margin",
+            "values": {
+                "net_income": 25,
+                "revenue": 100,
+            },
         },
     )
 
     assert result["success"] is True
-    assert result["data"]["result"] == pytest.approx(25.0)
+    assert result["data"]["result"] == 25.0
 
 
-def test_division_by_zero_is_handled(registry):
-    """Division by zero should produce a controlled error."""
+def test_zero_revenue_is_handled(registry):
+    """Zero revenue should produce a controlled error."""
     result = registry.execute(
         "calculation_engine",
         {
-            "operation": "divide",
-            "values": [100, 0],
+            "operation": "profit_margin",
+            "values": {
+                "net_income": 25,
+                "revenue": 0,
+            },
         },
     )
 
     assert result["success"] is False
     assert result["error_type"] == "ValueError"
-    assert "Division by zero" in result["error"]
-
+    assert "revenue cannot be zero" in result["error"]
 
 def test_missing_required_argument(registry):
     """Missing required input should fail validation."""

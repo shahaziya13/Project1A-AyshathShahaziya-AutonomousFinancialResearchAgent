@@ -14,7 +14,11 @@ from tools.schemas.tool_schemas import TOOL_SCHEMAS
 from tools.web_search import web_search
 from tools.news_sentiment import news_sentiment
 from tools.memory_tools import vector_db_search, vector_db_store
-
+from tools.earnings_transcript import earnings_transcript
+from tools.peer_comparison import peer_comparison
+from tools.calculation_engine import calculation_engine
+from tools.fact_checker import fact_checker
+from tools.report_generator import report_generator
 
 class ToolRegistry:
     """Manage all tools available to the research agent."""
@@ -33,6 +37,11 @@ class ToolRegistry:
         self._functions["company_profile"] = company_profile
         self._functions["vector_db_search"] = vector_db_search
         self._functions["vector_db_store"] = vector_db_store
+        self._functions["earnings_transcript"] = earnings_transcript
+        self._functions["peer_comparison"] = peer_comparison
+        self._functions["calculation_engine"] = calculation_engine
+        self._functions["fact_checker"] = fact_checker
+        self._functions["report_generator"] = report_generator
 
     def list_tools(self) -> list[str]:
         """Return the names of all registered tools."""

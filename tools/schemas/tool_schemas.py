@@ -75,26 +75,42 @@ TOOL_SCHEMAS = [
         "type": "function",
         "function": {
             "name": "earnings_transcript",
-            "description": "Retrieve or search a company's earnings-call transcript.",
+            "description": (
+                "Discover public earnings-call transcript sources "
+                "and relevant transcript excerpts for a company."
+            ),
             "parameters": {
                 "type": "object",
                 "properties": {
                     "company": {
                         "type": "string",
-                        "description": "Company name or ticker symbol."
+                        "description": (
+                            "Company name or ticker symbol."
+                        ),
                     },
                     "quarter": {
                         "type": "string",
-                        "description": "Quarter such as Q1, Q2, Q3, or Q4."
+                        "description": (
+                            "Quarter to research, for example "
+                            "Q3 FY2026 or latest."
+                        ),
+                        "default": "latest",
                     },
-                    "year": {
+                    "max_results": {
                         "type": "integer",
-                        "description": "Fiscal year."
-                    }
+                        "description": (
+                            "Maximum number of transcript sources "
+                            "to retrieve."
+                        ),
+                        "minimum": 1,
+                        "maximum": 10,
+                        "default": 5,
+                    },
                 },
-                "required": ["company"]
-            }
-        }
+                "required": ["company"],
+                "additionalProperties": False,
+            },
+        },
     },
 
     {
@@ -246,7 +262,7 @@ TOOL_SCHEMAS = [
             },
         },
     },
-    
+
     {
         "type": "function",
         "function": {
@@ -294,82 +310,189 @@ TOOL_SCHEMAS = [
         "type": "function",
         "function": {
             "name": "report_generator",
-            "description": "Generate a structured financial research report from verified findings.",
+            "description": (
+                "Generate a structured Markdown financial "
+                "research report from collected findings, "
+                "sources, confidence, and limitations."
+            ),
             "parameters": {
                 "type": "object",
                 "properties": {
                     "title": {
                         "type": "string",
-                        "description": "Report title."
+                        "description": "Title of the report.",
                     },
-                    "findings": {
+                    "research_query": {
+                        "type": "string",
+                        "description": (
+                            "Original financial research query."
+                        ),
+                    },
+                    "sections": {
                         "type": "array",
-                        "items": {"type": "string"},
-                        "description": "Verified research findings."
+                        "description": (
+                            "Structured sections of the report."
+                        ),
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "heading": {
+                                    "type": "string"
+                                },
+                                "content": {
+                                    "type": "string"
+                                },
+                            },
+                            "required": [
+                                "heading",
+                                "content",
+                            ],
+                            "additionalProperties": False,
+                        },
+                        "minItems": 1,
                     },
-                    "include_sources": {
-                        "type": "boolean",
-                        "description": "Whether sources should be included."
-                    }
+                    "sources": {
+                        "type": "array",
+                        "description": (
+                            "Sources used to support the report."
+                        ),
+                        "items": {
+                            "type": "string"
+                        },
+                    },
+                    "confidence": {
+                        "type": "number",
+                        "description": (
+                            "Overall report confidence from 0 to 1."
+                        ),
+                        "minimum": 0,
+                        "maximum": 1,
+                        "default": 0.8,
+                    },
+                    "limitations": {
+                        "type": "array",
+                        "description": (
+                            "Known limitations or evidence gaps."
+                        ),
+                        "items": {
+                            "type": "string"
+                        },
+                    },
                 },
-                "required": ["title", "findings"]
-            }
-        }
+                "required": [
+                    "title",
+                    "research_query",
+                    "sections",
+                ],
+                "additionalProperties": False,
+            },
+        },
     },
 
     {
         "type": "function",
         "function": {
             "name": "fact_checker",
-            "description": "Cross-check a financial claim against available evidence.",
+            "description": (
+                "Verify a financial claim using evidence from "
+                "multiple sources and flag numerical disagreements "
+                "greater than the allowed tolerance."
+            ),
             "parameters": {
                 "type": "object",
                 "properties": {
                     "claim": {
                         "type": "string",
-                        "description": "Claim that needs verification."
+                        "description": (
+                            "Financial claim to verify."
+                        ),
                     },
                     "evidence": {
                         "type": "array",
-                        "items": {"type": "string"},
-                        "description": "Evidence used to verify the claim."
-                    }
+                        "description": (
+                            "Evidence collected from one or more "
+                            "independent sources."
+                        ),
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "source": {
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "type": "number"
+                                },
+                                "supports_claim": {
+                                    "type": "boolean"
+                                },
+                            },
+                            "required": ["source"],
+                            "additionalProperties": False,
+                        },
+                        "minItems": 1,
+                    },
+                    "tolerance_percent": {
+                        "type": "number",
+                        "description": (
+                            "Maximum numerical disagreement allowed "
+                            "before evidence is flagged as conflicting."
+                        ),
+                        "minimum": 0,
+                        "default": 5.0,
+                    },
                 },
-                "required": ["claim", "evidence"]
-            }
-        }
+                "required": [
+                    "claim",
+                    "evidence",
+                ],
+                "additionalProperties": False,
+            },
+        },
     },
 
     {
         "type": "function",
         "function": {
             "name": "calculation_engine",
-            "description": "Perform supported financial and mathematical calculations.",
+            "description": (
+                "Perform deterministic financial calculations "
+                "including growth, financial ratios, and basic DCF."
+            ),
             "parameters": {
                 "type": "object",
                 "properties": {
                     "operation": {
                         "type": "string",
+                        "description": (
+                            "Financial calculation to perform."
+                        ),
                         "enum": [
-                            "add",
-                            "subtract",
-                            "multiply",
-                            "divide",
-                            "percentage_change"
+                            "percentage_change",
+                            "profit_margin",
+                            "current_ratio",
+                            "debt_to_equity",
+                            "basic_dcf",
                         ],
-                        "description": "Calculation to perform."
                     },
                     "values": {
-                        "type": "array",
-                        "items": {"type": "number"},
-                        "description": "Numeric values used in the calculation.",
-                        "minItems": 2
-                    }
+                        "type": "object",
+                        "description": (
+                            "Named numerical inputs required "
+                            "for the selected calculation."
+                        ),
+                        "additionalProperties": {
+                            "type": "number"
+                        },
+                    },
                 },
-                "required": ["operation", "values"]
-            }
-        }
-    }
+                "required": [
+                    "operation",
+                    "values",
+                ],
+                "additionalProperties": False,
+            },
+        },
+    },
 ]
 
 
