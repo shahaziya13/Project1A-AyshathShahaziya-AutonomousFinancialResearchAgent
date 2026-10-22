@@ -1,4 +1,4 @@
-"""
+﻿"""
 Tool schemas for the Autonomous Financial Research Agent (ARA-1).
 
 These schemas describe the tools available to the agent in a
@@ -186,7 +186,7 @@ TOOL_SCHEMAS = [
                         "type": "string",
                         "description": "Semantic search query."
                     },
-                    "top_k": {
+                    "n_results": {
                         "type": "integer",
                         "description": "Number of memory results to return.",
                         "minimum": 1,
